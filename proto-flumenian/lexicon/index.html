@@ -206,7 +206,7 @@ function filter() {
 
 async function load() {
 
-  const res = await fetch("lexicon.json");
+  const res = await fetch("https://soldgabriel13.github.io/Conlangs/proto-flumenian/lexicon/");
   entries = await res.json();
 
   document.getElementById("stats").textContent =
