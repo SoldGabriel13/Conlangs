@@ -97,105 +97,120 @@ main{
 
 (async()=>{
 
-const lexicon=await fetch("../lexicon.json").then(r=>r.json());
+const lexiconArray = await fetch("../lexicon.json").then(r => r.json());
+const annotationsObject = await fetch("translation.json").then(r => r.json());
 
-const verses=(await fetch("text.txt").then(r=>r.text()))
+const verses = (await fetch("text.txt").then(r => r.text()))
 .trim()
 .split(/\r?\n/);
 
-const annotations=await fetch("translation.json").then(r=>r.json());
+const main = document.getElementById("text");
+const tooltip = document.getElementById("tooltip");
 
-const main=document.getElementById("text");
-const tooltip=document.getElementById("tooltip");
+// ==========================
+// FAST LOOKUP MAP (Lemma → entry)
+// ==========================
+const lexiconMap = new Map(
+    lexiconArray.map(entry => [entry.Lemma, entry])
+);
 
-function show(e,meta){
+// ==========================
+// FLATTEN translation.json INTO ARRAY
+// ==========================
+const annotations = Object.keys(annotationsObject)
+    .sort((a, b) => Number(a) - Number(b))
+    .map(k => annotationsObject[k]);
 
-    const entry=lexicon[meta.index];
+// ==========================
+// GLOBAL WORD INDEX (CRITICAL FIX)
+// ==========================
+let globalWordIndex = 0;
 
-    tooltip.innerHTML=`
+// ==========================
+// TOOLTIP
+// ==========================
+function show(e, meta){
+
+    const entry = lexiconMap.get(meta.baseWord);
+
+    tooltip.innerHTML = `
         <h3>${meta.baseWord}</h3>
 
         <hr>
 
         <b>Meaning</b><br>
-        ${entry.Gloss ?? entry.translation ?? "-"}
+        ${entry?.Gloss ?? "-"}
 
         <br><br>
 
         <b>Pronunciation</b><br>
-        ${entry.IPA ?? "-"}
+        ${entry?.IPA ?? "-"}
 
         <br><br>
 
         <b>Translation</b><br>
-        ${meta.translation}
+        ${meta.translation ?? "-"}
 
         ${
             meta.notes
-            ?
-            `<br><br><b>Notes</b><br>${meta.notes}`
-            :
-            ""
+            ? `<br><br><b>Notes</b><br>${meta.notes}`
+            : ""
         }
     `;
 
-    tooltip.style.left=e.pageX+15+"px";
-    tooltip.style.top=e.pageY+15+"px";
-    tooltip.style.display="block";
+    tooltip.style.left = e.pageX + 15 + "px";
+    tooltip.style.top = e.pageY + 15 + "px";
+    tooltip.style.display = "block";
 }
 
 function hide(){
-    tooltip.style.display="none";
+    tooltip.style.display = "none";
 }
 
-verses.forEach((verseText,verseIndex)=>{
+// ==========================
+// RENDER TEXT.TXT
+// ==========================
+verses.forEach((verseText, verseIndex)=>{
 
-    const p=document.createElement("p");
+    const p = document.createElement("p");
+    p.className = "verse";
+    p.innerHTML = `<sup>${verseIndex+1}</sup> `;
 
-    p.className="verse";
+    const words = verseText.split(/\s+/);
 
-    p.innerHTML=`<sup>${verseIndex+1}</sup> `;
+    words.forEach((displayWord)=>{
 
-    const words=verseText.split(/\s+/);
+        const meta = annotations[globalWordIndex];
 
-    words.forEach((displayWord,i)=>{
-
-        const meta=annotations[verseIndex][i];
-
-        const span=document.createElement("span");
-
-        span.className="word";
-
-        span.textContent=displayWord+" ";
+        const span = document.createElement("span");
+        span.className = "word";
+        span.textContent = displayWord + " ";
 
         if(meta){
 
-            span.addEventListener("mouseenter",e=>show(e,meta));
-
-            span.addEventListener("mouseleave",hide);
-
-            span.addEventListener("click",e=>show(e,meta));
-
+            span.addEventListener("mouseenter", e => show(e, meta));
+            span.addEventListener("mouseleave", hide);
+            span.addEventListener("click", e => show(e, meta));
         }
 
-        p.appendChild(span);
+        globalWordIndex++;
 
+        p.appendChild(span);
     });
 
     main.appendChild(p);
-
 });
 
-document.body.addEventListener("click",e=>{
-
+// ==========================
+// CLOSE TOOLTIP ON CLICK OUTSIDE
+// ==========================
+document.body.addEventListener("click", e=>{
     if(!e.target.classList.contains("word"))
         hide();
-
 });
 
 })();
 
 </script>
-
 </body>
 </html>
