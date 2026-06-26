@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Proto-Flumenian Bible</title>
+
+<style>
+
+:root{
+    --main:#2e7d32;
+    --light:#a5d6a7;
+    --bg:#f4fdf6;
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:var(--bg);
+}
+
+header{
+    background:var(--main);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+main{
+    max-width:900px;
+    margin:auto;
+    padding:30px;
+    font-size:1.35rem;
+    line-height:2;
+}
+
+.verse{
+    margin-bottom:18px;
+}
+
+.word{
+    cursor:help;
+    border-bottom:1px dotted var(--main);
+    padding:2px;
+}
+
+.word:hover{
+    background:#dff5e0;
+}
+
+#tooltip{
+    position:fixed;
+    display:none;
+    max-width:300px;
+
+    background:white;
+
+    border:2px solid var(--main);
+
+    border-radius:8px;
+
+    padding:12px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+    z-index:1000;
+}
+
+#tooltip h3{
+    margin:0;
+    color:var(--main);
+}
+
+#tooltip hr{
+    border:none;
+    border-top:1px solid #ddd;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Proto-Flumenian Bible</h1>
+
+</header>
+
+<main id="text"></main>
+
+<div id="tooltip"></div>
+
+<script>
+
+(async()=>{
+
+const lexicon=await fetch("../lexicon.json").then(r=>r.json());
+
+const verses=(await fetch("text.txt").then(r=>r.text()))
+.trim()
+.split(/\r?\n/);
+
+const annotations=await fetch("translation.json").then(r=>r.json());
+
+const main=document.getElementById("text");
+const tooltip=document.getElementById("tooltip");
+
+function show(e,meta){
+
+    const entry=lexicon[meta.index];
+
+    tooltip.innerHTML=`
+        <h3>${meta.baseWord}</h3>
+
+        <hr>
+
+        <b>Meaning</b><br>
+        ${entry.Gloss ?? entry.translation ?? "-"}
+
+        <br><br>
+
+        <b>Pronunciation</b><br>
+        ${entry.IPA ?? "-"}
+
+        <br><br>
+
+        <b>Translation</b><br>
+        ${meta.translation}
+
+        ${
+            meta.notes
+            ?
+            `<br><br><b>Notes</b><br>${meta.notes}`
+            :
+            ""
+        }
+    `;
+
+    tooltip.style.left=e.pageX+15+"px";
+    tooltip.style.top=e.pageY+15+"px";
+    tooltip.style.display="block";
+}
+
+function hide(){
+    tooltip.style.display="none";
+}
+
+verses.forEach((verseText,verseIndex)=>{
+
+    const p=document.createElement("p");
+
+    p.className="verse";
+
+    p.innerHTML=`<sup>${verseIndex+1}</sup> `;
+
+    const words=verseText.split(/\s+/);
+
+    words.forEach((displayWord,i)=>{
+
+        const meta=annotations[verseIndex][i];
+
+        const span=document.createElement("span");
+
+        span.className="word";
+
+        span.textContent=displayWord+" ";
+
+        if(meta){
+
+            span.addEventListener("mouseenter",e=>show(e,meta));
+
+            span.addEventListener("mouseleave",hide);
+
+            span.addEventListener("click",e=>show(e,meta));
+
+        }
+
+        p.appendChild(span);
+
+    });
+
+    main.appendChild(p);
+
+});
+
+document.body.addEventListener("click",e=>{
+
+    if(!e.target.classList.contains("word"))
+        hide();
+
+});
+
+})();
+
+</script>
+
+</body>
+</html>
