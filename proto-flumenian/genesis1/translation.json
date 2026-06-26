@@ -1,31 +1,25 @@
-[
-  [
-    {
-      "index": 41,
-      "translation": "In",
-      "baseWord": "hbu",
-      "notes": null
+{
+    "0": {
+        "translation": "In",
+        "baseWord": "hbu",
+        "notes": null
     },
-    {
-      "index": 67,
-      "translation": "beginning",
-      "baseWord": "neuɸipe",
-      "notes": "Nominalized verb"
-    },
-    {
-      "index": 52,
-      "translation": "God",
-      "baseWord": "iaβɛ",
-      "notes": null
-    }
-  ],
 
-  [
-    {
-      "index": 31,
-      "translation": "earth",
-      "baseWord": "dɛniʂ",
-      "notes": null
+    "1": {
+        "translation": "beginning",
+        "baseWord": "neuɸipe",
+        "notes": "Nominalized verb"
+    },
+
+    "2": {
+        "translation": "God",
+        "baseWord": "iaβɛ",
+        "notes": null
+    },
+
+    "3": {
+        "translation": "created",
+        "baseWord": "ɸaɾ",
+        "notes": "Past 3SG"
     }
-  ]
-]
+}
