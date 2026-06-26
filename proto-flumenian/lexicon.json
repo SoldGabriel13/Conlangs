@@ -221,9 +221,9 @@
   },
   {
     "Lemma": "bɛamʃa",
-    "Gloss": "Evening",
+    "Gloss": "evening",
     "IPA": "bɛa.m.ˈʃa",
-    "pos": "Noun",
+    "pos": "noun",
     "Etymology": "",
     "Notes": "",
     "Tags": "",
@@ -401,7 +401,7 @@
   },
   {
     "Lemma": "hbu",
-    "Gloss": "in; at; on",
+    "Gloss": "at(temporal)",
     "IPA": "hbu",
     "pos": "prep",
     "Etymology": "",
@@ -630,6 +630,26 @@
     "Related Words": ""
   },
   {
+    "Lemma": "nenpe",
+    "Gloss": "to show",
+    "IPA": "nenpe",
+    "pos": "verb",
+    "Etymology": "",
+    "Notes": "",
+    "Tags": "",
+    "Related Words": ""
+  },
+  {
+    "Lemma": "netʃ",
+    "Gloss": "dry",
+    "IPA": "netʃ",
+    "pos": "adj",
+    "Etymology": "",
+    "Notes": "",
+    "Tags": "",
+    "Related Words": ""
+  },
+  {
     "Lemma": "neuɸipe",
     "Gloss": "to begin; to start",
     "IPA": "neuɸipe",
@@ -820,6 +840,16 @@
     "Related Words": ""
   },
   {
+    "Lemma": "piɾmpe",
+    "Gloss": "to gather; to merge",
+    "IPA": "piɾmpe",
+    "pos": "verb",
+    "Etymology": "",
+    "Notes": "",
+    "Tags": "",
+    "Related Words": ""
+  },
+  {
     "Lemma": "pmɛi",
     "Gloss": "face",
     "IPA": "pmɛi",
@@ -864,6 +894,16 @@
     "Gloss": "to name; to call",
     "IPA": "pʂpe",
     "pos": "verb",
+    "Etymology": "",
+    "Notes": "",
+    "Tags": "",
+    "Related Words": ""
+  },
+  {
+    "Lemma": "pʃa",
+    "Gloss": "in; on",
+    "IPA": "pʃa",
+    "pos": "prep",
     "Etymology": "",
     "Notes": "",
     "Tags": "",
@@ -1333,6 +1373,16 @@
     "Lemma": "ɾɛpi",
     "Gloss": "rock; stone",
     "IPA": "'ɾɛpi",
+    "pos": "noun",
+    "Etymology": "",
+    "Notes": "",
+    "Tags": "",
+    "Related Words": ""
+  },
+  {
+    "Lemma": "ʂabɾi",
+    "Gloss": "place",
+    "IPA": "ʂabɾi",
     "pos": "noun",
     "Etymology": "",
     "Notes": "",
