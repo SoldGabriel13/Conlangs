@@ -138,18 +138,13 @@ function show(e, meta){
 
         <hr>
 
-        <b>Meaning</b><br>
-        ${entry?.Gloss ?? "-"}
+        <b>Translation</b><br>
+        ${meta.translation ?? "-"}
 
         <br><br>
 
         <b>Pronunciation</b><br>
         /${entry?.IPA ?? "-"}/
-
-        <br><br>
-
-        <b>Translation</b><br>
-        ${meta.translation ?? "-"}
 
         ${
             meta.notes
