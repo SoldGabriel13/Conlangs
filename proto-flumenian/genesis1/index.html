@@ -102,10 +102,12 @@ main{
 <div id="tooltip"></div>
 
 <script>
+(async () => {
 
-(async()=>{
+const translation = await fetch("translation.json").then(r => r.json());
 
-const annotationsObject = await fetch("translation.json").then(r => r.json());
+const dictionary = translation.words;
+const overrides = translation.overrides ?? {};
 
 const verses = (await fetch("text.txt").then(r => r.text()))
 .trim()
@@ -114,21 +116,8 @@ const verses = (await fetch("text.txt").then(r => r.text()))
 const main = document.getElementById("text");
 const tooltip = document.getElementById("tooltip");
 
-// ==========================
-// FLATTEN translation.json INTO ARRAY
-// ==========================
-const annotations = Object.keys(annotationsObject)
-    .sort((a, b) => Number(a) - Number(b))
-    .map(k => annotationsObject[k]);
-
-// ==========================
-// GLOBAL WORD INDEX
-// ==========================
 let globalWordIndex = 0;
 
-// ==========================
-// TOOLTIP
-// ==========================
 function show(e, meta){
 
     tooltip.innerHTML = `
@@ -137,7 +126,7 @@ function show(e, meta){
         <hr>
 
         ${
-            meta.lemma && meta.lemma !== meta.word
+            meta.lemma
             ? `<b>Lemma</b><br>${meta.lemma}<br><br>`
             : ""
         }
@@ -166,50 +155,48 @@ function hide(){
     tooltip.style.display = "none";
 }
 
-// ==========================
-// RENDER TEXT
-// ==========================
 verses.forEach((verseText, verseIndex)=>{
 
     const p = document.createElement("p");
     p.className = "verse";
     p.innerHTML = `<sup>${verseIndex+1}</sup> `;
 
-    const words = verseText.split(/\s+/);
+    verseText.split(/\s+/).forEach(displayWord=>{
 
-    words.forEach((displayWord)=>{
+        const base = dictionary[displayWord] ?? {};
 
-        const meta = annotations[globalWordIndex];
+        const meta = {
+            word: displayWord,
+            ...base,
+            ...(overrides[globalWordIndex] ?? {})
+        };
 
         const span = document.createElement("span");
         span.className = "word";
-        span.textContent = (meta?.word ?? displayWord) + " ";
+        span.textContent = displayWord + " ";
 
-        if(meta){
-
-            span.addEventListener("mouseenter", e => show(e, meta));
-            span.addEventListener("mouseleave", hide);
-            span.addEventListener("click", e => show(e, meta));
+        if(base || overrides[globalWordIndex]){
+            span.addEventListener("mouseenter",e=>show(e,meta));
+            span.addEventListener("mouseleave",hide);
+            span.addEventListener("click",e=>show(e,meta));
         }
 
         globalWordIndex++;
 
         p.appendChild(span);
+
     });
 
     main.appendChild(p);
+
 });
 
-// ==========================
-// CLOSE TOOLTIP
-// ==========================
-document.body.addEventListener("click", e=>{
+document.body.addEventListener("click",e=>{
     if(!e.target.classList.contains("word"))
         hide();
 });
 
 })();
-
 </script>
 </body>
 </html>
