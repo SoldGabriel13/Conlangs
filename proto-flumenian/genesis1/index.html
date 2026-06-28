@@ -105,7 +105,6 @@ main{
 
 (async()=>{
 
-const lexiconArray = await fetch("../lexicon.json").then(r => r.json());
 const annotationsObject = await fetch("translation.json").then(r => r.json());
 
 const verses = (await fetch("text.txt").then(r => r.text()))
@@ -116,13 +115,6 @@ const main = document.getElementById("text");
 const tooltip = document.getElementById("tooltip");
 
 // ==========================
-// FAST LOOKUP MAP (Lemma → entry)
-// ==========================
-const lexiconMap = new Map(
-    lexiconArray.map(entry => [entry.Lemma, entry])
-);
-
-// ==========================
 // FLATTEN translation.json INTO ARRAY
 // ==========================
 const annotations = Object.keys(annotationsObject)
@@ -130,7 +122,7 @@ const annotations = Object.keys(annotationsObject)
     .map(k => annotationsObject[k]);
 
 // ==========================
-// GLOBAL WORD INDEX (CRITICAL FIX)
+// GLOBAL WORD INDEX
 // ==========================
 let globalWordIndex = 0;
 
@@ -139,12 +131,16 @@ let globalWordIndex = 0;
 // ==========================
 function show(e, meta){
 
-    const entry = lexiconMap.get(meta.baseWord);
-
     tooltip.innerHTML = `
-        <h3>${meta.baseWord}</h3>
+        <h3>${meta.word}</h3>
 
         <hr>
+
+        ${
+            meta.lemma && meta.lemma !== meta.word
+            ? `<b>Lemma</b><br>${meta.lemma}<br><br>`
+            : ""
+        }
 
         <b>Translation</b><br>
         ${meta.translation ?? "-"}
@@ -152,7 +148,7 @@ function show(e, meta){
         <br><br>
 
         <b>Pronunciation</b><br>
-        /${entry?.IPA ?? "-"}/
+        /${meta.pronunciation ?? "-"}/
 
         ${
             meta.notes
@@ -171,7 +167,7 @@ function hide(){
 }
 
 // ==========================
-// RENDER TEXT.TXT
+// RENDER TEXT
 // ==========================
 verses.forEach((verseText, verseIndex)=>{
 
@@ -187,7 +183,7 @@ verses.forEach((verseText, verseIndex)=>{
 
         const span = document.createElement("span");
         span.className = "word";
-        span.textContent = displayWord + " ";
+        span.textContent = (meta?.word ?? displayWord) + " ";
 
         if(meta){
 
@@ -205,7 +201,7 @@ verses.forEach((verseText, verseIndex)=>{
 });
 
 // ==========================
-// CLOSE TOOLTIP ON CLICK OUTSIDE
+// CLOSE TOOLTIP
 // ==========================
 document.body.addEventListener("click", e=>{
     if(!e.target.classList.contains("word"))
