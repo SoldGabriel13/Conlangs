@@ -9,7 +9,7 @@
       "lemma": "neuɸipe",
       "translation": "beginning",
       "pronunciation": "neuɸipuɾ",
-      "notes": "nominalization of the progressive form of the verb 'to begin'; neuɸipe -> neuɸipu -> neuɸipuɾ"
+      "notes": "Nominalization of the progressive form of the verb 'to begin'; neuɸipe -> neuɸipu -> neuɸipuɾ"
     },
 
     "iaβɛ": {
@@ -43,14 +43,14 @@
       "lemma": "həipe",
       "translation": "was",
       "pronunciation": "həibe",
-      "notes": "Past tense of 'to be'"
+      "notes": "Past tense of 'is'"
     },
 
     "patɾɛn": {
       "lemma": "patɾɛ",
       "translation": "shapeless",
       "pronunciation": "patɾɛn",
-      "notes": "antonym of patɾɛ, 'shaped'; viz. patɾɛn, 'shapeless'"
+      "notes": "Antonym of patɾɛ, 'shaped'; viz. patɾɛn, 'shapeless'"
     },
 
     "anuabɛn": {
@@ -62,8 +62,51 @@
     "diɛtʂɾ": {
       "lemma": "diɛtʂ",
       "translation": "darkness",
-      "pronunciation": "diɛtʂɾ"
-    }
+      "pronunciation": "diɛtʂɾ",
+      "notes": "Nominalization of diɛtʂ, 'dark'; viz. diɛtʂɾ, 'darkness'"
+    },
+
+    "pʃa": {
+      "translation": "on, over",
+      "pronunciation": "p.'ʃa"
+    },
+
+    "ɸəpeɾuɾ": {
+      "translation": "empty",
+      "pronunciation": "ɸə.pe.'ɾuɾ",
+      "notes": "Although this word is part of the lexicon, it is derived of the adjective ɸəpeɾu, empty; ɸəpeɾu + ɾ"
+    },
+    
+    "nu": {
+      "translation": " 's ",
+      "pronunciation": "nu",
+      "notes": "Marks possession"
+    },
+    
+    "nitʃ": {
+      "translation": "wind",
+      "pronunciation": "'ni.t.ʃ",
+      "notes": "In this context, it means 'spirit'"
+    },
+    
+    "ɸeβnebe": {
+      "lemma": "ɸeβnepe",
+      "translation": "hovered",
+      "pronunciation": "'ni.t.ʃ",
+      "notes": "It also means 'flew'"
+    },
+
+    "tʃim": {
+      "lemma": "tʃi",
+      "translation": "waters",
+      "pronunciation": "t.'ʃim",
+      "notes": "Plural form of 'water'"
+    },
+
+    "pmɛi": {
+      "translation": "pmɛi",
+      "pronunciation": "p.'mɛ.i"
+    },
   },
 
   "overrides": {
