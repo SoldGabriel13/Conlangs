@@ -1,81 +1,121 @@
 {
     "0": {
+        "word": "hbu",
+        "lemma": "hbu",
         "translation": "In",
-        "baseWord": "hbu",
+        "pronunciation": "hbu",
         "notes": null
     },
 
     "1": {
+        "word": "neuɸipuɾ",
+        "lemma": "neuɸipe",
         "translation": "beginning",
-        "baseWord": "neuɸipuɾ",
+        "pronunciation": "neuɸipuɾ",
         "notes": null
     },
 
     "2": {
+        "word": "iaβɛ",
+        "lemma": "iaβɛ",
         "translation": "God",
-        "baseWord": "iaβɛ",
+        "pronunciation": "iaβɛ",
         "notes": null
     },
 
     "3": {
+        "word": "neuɸibe",
+        "lemma": "neuɸipe",
         "translation": "created",
-        "baseWord": "neuɸipe",
+        "pronunciation": "neuɸibe",
         "notes": "Past tense"
     },
-    "4": {
-        "translation": "Heavens",
-        "baseWord": "haʂana",
-        "notes": null
-    },
-    "5": {
-        "translation": "and",
-        "baseWord": "ɛ",
-        "notes": null
-    },
-    "6": {
-        "translation": "earth",
-        "baseWord": "dɛniʂ",
-        "notes": null
-    },
-    "7": {
-        "translation": "and",
-        "baseWord": "ɛ",
-        "notes": null
-    },
-    "8": {
-        "translation": "earth",
-        "baseWord": "dɛniʂ",
-        "notes": null
-    },
-    "9": {
-        "translation": "was",
-        "baseWord": "həipe",
-        "notes": "is -be(PAST)"
-    },
-    "10": {
-        "translation": "shapeless",
-        "baseWord": "patɾɛ",
-        "notes": "shaped + -n(antonym)"
-    },
-    "11": {
-        "translation": "and",
-        "baseWord": "ɛ",
-        "notes": null
-    },
-    "12": {
-        "translation": "chaotic",
-        "baseWord": "anuabɛn",
-        "notes": "ordered + -n(antonym)"
-    },
-    "13": {
-        "translation": "and",
-        "baseWord": "ɛ",
-        "notes": null
-    },
-    "14": {
-        "translation": "darkness",
-        "baseWord": "diɛtʂɾ",
-        "notes": "dark + -ɾ(Norminalize)"
-    }
 
+    "4": {
+        "word": "haʂana",
+        "lemma": "haʂana",
+        "translation": "Heavens",
+        "pronunciation": "haʂana",
+        "notes": null
+    },
+
+    "5": {
+        "word": "ɛ",
+        "lemma": "ɛ",
+        "translation": "and",
+        "pronunciation": "ɛ",
+        "notes": null
+    },
+
+    "6": {
+        "word": "dɛniʂ",
+        "lemma": "dɛniʂ",
+        "translation": "earth",
+        "pronunciation": "dɛniʂ",
+        "notes": null
+    },
+
+    "7": {
+        "word": "ɛ",
+        "lemma": "ɛ",
+        "translation": "and",
+        "pronunciation": "ɛ",
+        "notes": null
+    },
+
+    "8": {
+        "word": "dɛniʂ",
+        "lemma": "dɛniʂ",
+        "translation": "earth",
+        "pronunciation": "dɛniʂ",
+        "notes": null
+    },
+
+    "9": {
+        "word": "həibe",
+        "lemma": "həipe",
+        "translation": "was",
+        "pronunciation": "həibe",
+        "notes": "Past tense of 'to be'"
+    },
+
+    "10": {
+        "word": "patɾɛn",
+        "lemma": "patɾɛ",
+        "translation": "shapeless",
+        "pronunciation": "patɾɛn",
+        "notes": "Derived from 'shaped' with antonym suffix -n"
+    },
+
+    "11": {
+        "word": "ɛ",
+        "lemma": "ɛ",
+        "translation": "and",
+        "pronunciation": "ɛ",
+        "notes": null
+    },
+
+    "12": {
+        "word": "anuabɛn",
+        "lemma": "anuabɛ",
+        "translation": "chaotic",
+        "pronunciation": "anuabɛn",
+        "notes": "Derived from 'ordered' with antonym suffix -n"
+    },
+
+    "13": {
+        "word": "ɛ",
+        "lemma": "ɛ",
+        "translation": "and",
+        "pronunciation": "ɛ",
+        "notes": null
+    },
+
+    "14": {
+        "word": "diɛtʂɾ",
+        "lemma": "diɛtʂ",
+        "translation": "darkness",
+        "pronunciation": "diɛtʂɾ",
+        "notes": "Nominalized form of 'dark'"
+    }
 }
