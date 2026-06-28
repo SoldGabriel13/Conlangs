@@ -1,121 +1,69 @@
 {
-    "0": {
-        "word": "hbu",
-        "lemma": "hbu",
-        "translation": "In",
-        "pronunciation": "hbu",
-        "notes": null
+  "words": {
+    "hbu": {
+      "translation": "In",
+      "pronunciation": "hbu"
     },
 
-    "1": {
-        "word": "neuɸipuɾ",
-        "lemma": "neuɸipe",
-        "translation": "beginning",
-        "pronunciation": "neuɸipuɾ",
-        "notes": null
+    "neuɸipuɾ": {
+      "lemma": "neuɸipe",
+      "translation": "beginning",
+      "pronunciation": "neuɸipuɾ"
     },
 
-    "2": {
-        "word": "iaβɛ",
-        "lemma": "iaβɛ",
-        "translation": "God",
-        "pronunciation": "iaβɛ",
-        "notes": null
+    "iaβɛ": {
+      "translation": "God",
+      "pronunciation": "iaβɛ"
     },
 
-    "3": {
-        "word": "neuɸibe",
-        "lemma": "neuɸipe",
-        "translation": "created",
-        "pronunciation": "neuɸibe",
-        "notes": "Past tense"
+    "neuɸibe": {
+      "lemma": "neuɸipe",
+      "translation": "created",
+      "pronunciation": "neuɸibe",
+      "notes": "Past tense"
     },
 
-    "4": {
-        "word": "haʂana",
-        "lemma": "haʂana",
-        "translation": "Heavens",
-        "pronunciation": "haʂana",
-        "notes": null
+    "haʂana": {
+      "translation": "Heavens",
+      "pronunciation": "haʂana"
     },
 
-    "5": {
-        "word": "ɛ",
-        "lemma": "ɛ",
-        "translation": "and",
-        "pronunciation": "ɛ",
-        "notes": null
+    "ɛ": {
+      "translation": "and",
+      "pronunciation": "ɛ"
     },
 
-    "6": {
-        "word": "dɛniʂ",
-        "lemma": "dɛniʂ",
-        "translation": "earth",
-        "pronunciation": "dɛniʂ",
-        "notes": null
+    "dɛniʂ": {
+      "translation": "earth",
+      "pronunciation": "dɛniʂ"
     },
 
-    "7": {
-        "word": "ɛ",
-        "lemma": "ɛ",
-        "translation": "and",
-        "pronunciation": "ɛ",
-        "notes": null
+    "həibe": {
+      "lemma": "həipe",
+      "translation": "was",
+      "pronunciation": "həibe",
+      "notes": "Past tense of 'to be'"
     },
 
-    "8": {
-        "word": "dɛniʂ",
-        "lemma": "dɛniʂ",
-        "translation": "earth",
-        "pronunciation": "dɛniʂ",
-        "notes": null
+    "patɾɛn": {
+      "lemma": "patɾɛ",
+      "translation": "shapeless",
+      "pronunciation": "patɾɛn"
     },
 
-    "9": {
-        "word": "həibe",
-        "lemma": "həipe",
-        "translation": "was",
-        "pronunciation": "həibe",
-        "notes": "Past tense of 'to be'"
+    "anuabɛn": {
+      "lemma": "anuabɛ",
+      "translation": "chaotic",
+      "pronunciation": "anuabɛn"
     },
 
-    "10": {
-        "word": "patɾɛn",
-        "lemma": "patɾɛ",
-        "translation": "shapeless",
-        "pronunciation": "patɾɛn",
-        "notes": "Derived from 'shaped' with antonym suffix -n"
-    },
-
-    "11": {
-        "word": "ɛ",
-        "lemma": "ɛ",
-        "translation": "and",
-        "pronunciation": "ɛ",
-        "notes": null
-    },
-
-    "12": {
-        "word": "anuabɛn",
-        "lemma": "anuabɛ",
-        "translation": "chaotic",
-        "pronunciation": "anuabɛn",
-        "notes": "Derived from 'ordered' with antonym suffix -n"
-    },
-
-    "13": {
-        "word": "ɛ",
-        "lemma": "ɛ",
-        "translation": "and",
-        "pronunciation": "ɛ",
-        "notes": null
-    },
-
-    "14": {
-        "word": "diɛtʂɾ",
-        "lemma": "diɛtʂ",
-        "translation": "darkness",
-        "pronunciation": "diɛtʂɾ",
-        "notes": "Nominalized form of 'dark'"
+    "diɛtʂɾ": {
+      "lemma": "diɛtʂ",
+      "translation": "darkness",
+      "pronunciation": "diɛtʂɾ"
     }
+  },
+
+  "overrides": {
+  }
 }
