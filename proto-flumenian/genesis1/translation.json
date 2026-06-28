@@ -32,9 +32,50 @@
         "baseWord": "ɛ",
         "notes": null
     },
+    "7": {
+        "translation": "and",
+        "baseWord": "ɛ",
+        "notes": null
+    },
+    "11": {
+        "translation": "and",
+        "baseWord": "ɛ",
+        "notes": null
+    },
+    "13": {
+        "translation": "and",
+        "baseWord": "ɛ",
+        "notes": null
+    },
     "6": {
         "translation": "earth",
         "baseWord": "dɛniʂ",
         "notes": null
+    },
+    "8": {
+        "translation": "earth",
+        "baseWord": "dɛniʂ",
+        "notes": null
+    },
+    "9": {
+        "translation": "was",
+        "baseWord": "həipe",
+        "notes": "is -be(PAST)"
+    },
+    "10": {
+        "translation": "shapeless",
+        "baseWord": "patɾɛ",
+        "notes": "shaped + -n(antonym)"
+    },
+    "12": {
+        "translation": "chaotic",
+        "baseWord": "anuabɛn",
+        "notes": "ordered + -n(antonym)"
+    },
+    "13": {
+        "translation": "darkness",
+        "baseWord": "diɛtʂɾ",
+        "notes": "dark + -ɾ(Norminalize)"
     }
+
 }
