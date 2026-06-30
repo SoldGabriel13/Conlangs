@@ -97,6 +97,11 @@ main{
 
 </header>
 
+<div style="max-width:900px;margin:auto;padding:15px 30px;">
+<label><input type="checkbox" id="latinToggle"> Latin transcription</label><br>
+<label><input type="checkbox" id="translationToggle"> English translation</label>
+</div>
+
 <main id="text"></main>
 
 <div id="tooltip"></div>
@@ -117,6 +122,10 @@ const main = document.getElementById("text");
 const tooltip = document.getElementById("tooltip");
 
 let globalWordIndex = 0;
+const latinToggle=document.getElementById("latinToggle");
+const translationToggle=document.getElementById("translationToggle");
+function latinize(word){return word.replace(/ɛ/g,"é").replace(/β/g,"v").replace(/ʂ/g,"s").replace(/ʃ/g,"c").replace(/ɾ/g,"r").replace(/ɸ/g,"f").replace(/ə/g,"â");}
+function updateDisplay(){document.querySelectorAll(".word").forEach(span=>{const o=span.dataset.original;let t=o;if(translationToggle.checked){t=dictionary[o]?.translation??o;span.style.fontFamily="Arial,sans-serif";}else if(latinToggle.checked){t=latinize(o);span.style.fontFamily='"Comic Sans MS","Comic Sans",cursive';}else{span.style.fontFamily='"FlumenianFont", serif';}span.textContent=t+" ";});}
 
 function show(e, meta){
 
@@ -175,6 +184,7 @@ verses.forEach((verseText, verseIndex)=>{
 
         const span = document.createElement("span");
         span.className = "word";
+        span.dataset.original=displayWord;
         span.textContent = displayWord + " ";
 
         if(base || overrides[globalWordIndex]){
@@ -198,6 +208,8 @@ document.body.addEventListener("click",e=>{
         hide();
 });
 
+latinToggle.addEventListener("change",updateDisplay);
+translationToggle.addEventListener("change",updateDisplay);
 })();
 </script>
 </body>
