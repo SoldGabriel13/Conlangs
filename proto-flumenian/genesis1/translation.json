@@ -111,13 +111,13 @@
     "həbe": {
       "lemma": "həpe",
       "translation": "said",
-      "pronunciation": "'hə.be",
+      "pronunciation": "ˈhə.be",
       "notes": "Past tense"
     },
     
     "həitu": {
       "translation": "be",
-      "pronunciation": "'hə.i.tu",
+      "pronunciation": "ˈhə.i.tu",
       "notes": "Imperative"
     },
     
@@ -129,27 +129,79 @@
     "hutʂbe": {
       "lemma": "hutʂpe",
       "translation": "saw",
-      "pronunciation": "hut.'ʂbe",
+      "pronunciation": "hut.ˈʂbe",
       "notes": "Past tense"
     },
 
     "ame": {
       "translation": "that",
-      "pronunciation": "a.'me",
+      "pronunciation": "a.ˈme",
       "notes": "Conjunction"
     },
     
     "ɾau": {
       "translation": "good",
-      "pronunciation": "'ɾau"
+      "pronunciation": "ˈɾau"
     },
     
     "neʂube": {
       "lemma": "neʂupe",
       "translation": "separated",
-      "pronunciation": "ne.ʂu.'be",
+      "pronunciation": "ne.ʂu.ˈbe",
       "notes": "Past tense"
+    },
+
+    "pʂbe": {
+      "lemma": "pʂpe",
+      "translation": "called",
+      "pronunciation": "p.ˈʂbe",
+      "notes": "Past tense"
+    },
+
+    "nɛtɾub": {
+      "translation": "day",
+      "pronunciation": "nɛt.ˈɾub"
+    },
+    
+    "diɛtʂub": {
+      "translation": "night",
+      "pronunciation": "di.ɛt.ˈʂub"
+    },
+
+    "ɾutia": {
+      "translation": "firmament",
+      "pronunciation": "ɾu.'tia"
+    },
+    
+    "neʂutu": {
+      "lemma": "neʂupe",
+      "translation": "separate",
+      "pronunciation": "ne.'ʂu.tu",
+      "notes": "Imperative"
+    },
+    
+    "nta": {
+      "translation": "so",
+      "pronunciation": "n.'ta"
+    },
+
+    "əme": {
+      "translation": "that",
+      "pronunciation": "'ə.me",
+      "notes": "Pronoun"
+    },
+
+    "ʃueʃɛ": {
+      "translation": "bellow",
+      "pronunciation": "ʃu.e.'ʃɛ"
+    },
+
+    "ɾɛitəu": {
+      "translation": "bellow",
+      "pronunciation": "ɾɛ.i.'təu"
     }
+    
+
   },
 
   "overrides": {
