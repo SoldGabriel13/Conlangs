@@ -106,7 +106,50 @@
     "pmɛi": {
       "translation": "face",
       "pronunciation": "p.'mɛ.i"
-    }
+    },
+    
+    "həbe": {
+      "lemma": "həpe",
+      "translation": "said",
+      "pronunciation": "'hə.be",
+      "notes": "Past tense"
+    },
+    
+    "həitu": {
+      "translation": "be",
+      "pronunciation": "'hə.i.tu",
+      "notes": "Imperative"
+    },
+    
+    "uɾ": {
+      "translation": "light",
+      "pronunciation": "uɾ"
+    },
+
+    "hutʂbe": {
+      "lemma": "hutʂpe",
+      "translation": "saw",
+      "pronunciation": "hut.'ʂbe",
+      "notes": "Past tense"
+    },
+
+    "ame": {
+      "translation": "that",
+      "pronunciation": "a.'me",
+      "notes": "Conjunction"
+    },
+    
+    "ɾau": {
+      "translation": "good",
+      "pronunciation": "'ɾau"
+    },
+    
+    "neʂube": {
+      "lemma": "neʂupe",
+      "translation": "separated",
+      "pronunciation": "ne.ʂu.'be",
+      "notes": "Past tense"
+    },
   },
 
   "overrides": {
