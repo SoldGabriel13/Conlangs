@@ -199,9 +199,68 @@
     "ɾɛitəu": {
       "translation": "above",
       "pronunciation": "ɾɛ.i.'təu"
-    }
-    
+    },
 
+    "ɸi": {
+      "translation": "second",
+      "pronunciation": "ɸi"
+    },
+
+    "ad": {
+      "translation": "to",
+      "pronunciation": "ad"
+    },
+
+    "bhanʃa": {
+      "translation": "morning",
+      "pronunciation": "b.han.'ʃa"
+    },
+
+    "bɛamʃa": {
+      "translation": "evening",
+      "pronunciation": "bɛ.'am.ʃa"
+    },
+
+    "piɾmte": {
+      "lemma": "piɾmpe",
+      "translation": "gather",
+      "pronunciation": "piɾ.'m.te",
+      "notes": "Imperative"
+    },
+
+    "tu": {
+      "translation": "one",
+      "pronunciation": "tu"
+    },
+
+    "ʂabɾi": {
+      "translation": "place",
+      "pronunciation": "'ʂa.bɾi"
+    },
+
+    "nente": {
+      "lemma": "nenpe",
+      "translation": "show",
+      "pronunciation": "ne.'n.te",
+      "notes": "Imperative"
+    },
+
+    "netʃ": {
+      "translation": "dry",
+      "pronunciation": "'net.ʃ"
+    },
+    
+    "piɾmpuɾ": {
+      "lemma": "piɾmpe",
+      "translation": "gathering",
+      "pronunciation": "piɾ.m.'puɾ",
+      "notes": "Nominalization of the progressive form of the verb [to gather]; piɾmpe -> piɾmpu -> piɾmpuɾ"
+    },
+    
+    "ʂiɛ": {
+      "translation": "ocean",
+      "pronunciation": "ʂi.'ɛ"
+    },  
   },
 
   "overrides": {
